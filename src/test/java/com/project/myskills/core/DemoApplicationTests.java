@@ -1,4 +1,4 @@
-package com.projectM.core;
+package com.project.myskills.core;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
