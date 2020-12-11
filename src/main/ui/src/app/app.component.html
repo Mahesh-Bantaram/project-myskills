@@ -1,27 +1,33 @@
 <!-- Toolbar -->
 <div class="heading">
-	<h1>Welcome to Project My Skills </h1>
+	<b><h1>Welcome to Project MySkills </h1></b>
 </div>
+<br>
 
+<nav>
+  <ul>
+    <li><a routerLink="/addItem" routerLinkActive="active">Add Item</a></li>
+  </ul>
+</nav>
 
+<button class="btn-primary" (click)="getData()">Get Data</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="btn-primary" (click)="clearData()">Clear Data</button>
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-md-6" *ngIf="items">
 		<h2 class="items"> Item List</h2>
 		<ul *ngFor="let i of items">
 			<li class="item"><a (click)="getDataById(i.id)">{{i.name}}</a></li>
 		</ul>
-
-		<button class="btn-primary" (click)="getData()">Get Data</button>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<button class="btn-primary" (click)="clearData()">Clear Data</button>
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-6" *ngIf="item">
 		<h2 class="items"> Item Details</h2>
-		<b>Item ID: {{item?.id}} <br> Item Name: {{item?.name}} <br>Created By: {{item?.createdBy}}  
+		<b>Item ID: {{item?.id}} <br> Item Name: {{item?.name}} <br>Created By: {{item?.createdBy}}
 			<br> Date: {{item?.createdDate}}<br></b>
-		<router-outlet></router-outlet>
 	</div>
 </div>
-<div class="row">
-		<img src="{{item?.url}}">
+<div class="row" *ngIf="item">
+	<img src="{{item?.url}}" width="800px" height="470px">
 </div>
+
+<router-outlet></router-outlet>
