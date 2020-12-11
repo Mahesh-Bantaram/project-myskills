@@ -11,6 +11,10 @@ export class AppComponent {
 
   items: any;
 
+  item: any;
+
+  imgURL: string;
+
 
 
   constructor(private itemService: ItemService) {
@@ -22,8 +26,15 @@ export class AppComponent {
     )
   }
 
+  getDataById(id:number){
+    this.item = this.itemService.getItemById(id).subscribe(
+      (data: any) => this.item = data
+    )
+  }
+
   clearData(){
     this.items=null;
+    this.item=null;
   }
 
 

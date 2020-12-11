@@ -15,4 +15,8 @@ export class ItemService {
   getItems() {
     return this.httpClient.get('http://localhost:8080/api/items')
   }
+
+  getItemById(id:number){
+    return this.httpClient.get('http://localhost:8080/api/getById?id='+id);
+  }
 }

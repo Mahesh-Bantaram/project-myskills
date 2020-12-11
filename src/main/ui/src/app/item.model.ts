@@ -6,5 +6,6 @@ createdBy:string;
 updatedBy:string;
 createdDate:Date;
 updatedDate:Date;
+url:string;
 
 }

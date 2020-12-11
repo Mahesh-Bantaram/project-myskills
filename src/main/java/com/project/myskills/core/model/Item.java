@@ -6,6 +6,7 @@ public class Item {
 
 	long id;
 	String name;
+	String url;
 	String createdBy;
 	Date createdDate;
 	String updatedBy;
@@ -48,6 +49,14 @@ public class Item {
 	public void setUpdatedDate(Date updatedDate) {
 		this.updatedDate = updatedDate;
 	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	
+	
 	
 	
 	
