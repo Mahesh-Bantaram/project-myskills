@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,7 @@ import com.project.myskills.core.model.Item;
 @RequestMapping(value = "api")
 public class DataService {
 
+	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping(value = "items", method = RequestMethod.GET, produces = { "application/json" })
 	List<Item> getAllItems() {
 
