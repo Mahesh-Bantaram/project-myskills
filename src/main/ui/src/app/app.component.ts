@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ItemService } from './item.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { ItemService } from './item.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'ui';
 
   items: any;
@@ -19,11 +19,14 @@ export class AppComponent {
 
   constructor(private itemService: ItemService) {
   }
-
-  getData(){
+  ngOnInit(){
     this.items = this.itemService.getItems().subscribe(
       (data: any) => this.items = data
     )
+  }
+
+  getData(){
+   
   }
 
   getDataById(id:number){

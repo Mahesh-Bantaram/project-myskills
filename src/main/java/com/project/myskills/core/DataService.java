@@ -34,35 +34,18 @@ public class DataService {
 	static List<Item> allItems() {
 		List<Item> items = new ArrayList<Item>();
 
-		Item ite1 = new Item();
-		ite1.setId(1);
-		ite1.setName("Item-01");
-		ite1.setCreatedBy("System");
-		ite1.setCreatedDate(new Date());
-		ite1.setUpdatedBy("System");
-		ite1.setUpdatedDate(new Date());
-		ite1.setUrl("https://cdn.britannica.com/86/75886-050-B481C97E/Apricots.jpg");
-		items.add(ite1);
-
-		Item ite2 = new Item();
-		ite2.setId(2);
-		ite2.setName("Item-02");
-		ite2.setCreatedBy("System");
-		ite2.setCreatedDate(new Date());
-		ite2.setUpdatedBy("System");
-		ite2.setUpdatedDate(new Date());
-		ite2.setUrl("https://img.freepik.com/free-psd/smartphone-cover-case-mockup_358694-147.jpg");
-		items.add(ite2);
-
-		Item ite3 = new Item();
-		ite3.setId(3);
-		ite3.setName("Item-03");
-		ite3.setCreatedBy("System");
-		ite3.setCreatedDate(new Date());
-		ite3.setUpdatedBy("System");
-		ite3.setUpdatedDate(new Date());
-		ite3.setUrl("https://img.freepik.com/free-photo/jug-rice-milk-with-rice-plant-rice-seed-put-wooden-floor_1150-34547.jpg");
-		items.add(ite3);
+		for(int i=1;i<10;i++) {
+			Item ite1 = new Item();
+			ite1.setId(i);
+			ite1.setName("Item-"+i);
+			ite1.setPrice(i*100/75);
+			ite1.setCreatedBy("System");
+			ite1.setCreatedDate(new Date());
+			ite1.setUpdatedBy("System");
+			ite1.setUpdatedDate(new Date());
+			ite1.setUrl("image-0"+i);
+			items.add(ite1);
+		}
 		return items;
 	}
 

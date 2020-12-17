@@ -6,6 +6,7 @@ public class Item {
 
 	long id;
 	String name;
+	double price;
 	String url;
 	String createdBy;
 	Date createdDate;
@@ -55,6 +56,14 @@ public class Item {
 	public void setUrl(String url) {
 		this.url = url;
 	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double i) {
+		this.price = i;
+	}
+	
+	
 	
 	
 	
